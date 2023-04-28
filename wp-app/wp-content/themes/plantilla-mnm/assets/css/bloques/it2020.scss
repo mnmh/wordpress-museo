@@ -1,0 +1,207 @@
+$itcol: #cc6634;
+$itcol_active: #99cccc;
+$itclaro: #eee3d7;
+
+.map_nav, .map_lineatiempo{
+    display: flex;
+
+    .mapa_contenedor {
+        height: 90vh;
+        width: 60%;
+    }
+
+    > svg {
+        width: 60%;
+    }
+
+    .right{
+        background-color: $itclaro;
+        position: relative;
+        width: 40%;
+
+        .back {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80%;
+            height: 80%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            transform: translate(-50%, -50%);
+            opacity: 0.2;
+        }
+    }
+}
+
+.map_lineatiempo {
+    .right {
+        display: flex;
+        align-items: center;
+    }
+    
+    .content {
+        .nav {
+            .item {
+                font-size: 0.9em;
+                color: #555;
+                padding-left: 40px;
+                position: relative;
+                margin-bottom: 5px;
+        
+                .icon {
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    left: 21px;
+                    top: 5px;
+                    /* transform: translate(0, -50%); */
+                    border-radius: 20px;
+                    border: 2px solid white;
+                }
+
+                &:hover {
+                    background-color: white;
+                    cursor: pointer;
+                }
+            }
+
+            &.hide {
+                display: none;
+            }
+        }
+        .info {
+            position: relative;
+            padding: 10px;
+            .item{
+                margin-bottom: 5px;
+                color: #555;
+
+                b{
+                    color: $itcol;
+                }
+            }
+            &.hide {
+                display: none;
+            }
+            .backnav{
+                padding: 5px;
+                &:hover {
+                    background-color: white;
+                }
+            }
+        }
+    }
+}
+
+.mapa_bot {
+    display: flex;
+    .rigth, svg {
+        width: 50%;
+    }
+
+    .rigth {
+        display: flex;
+        align-items: center;
+        font-size: 2em;
+        color: $itcol
+    }
+}
+
+.parent-nav.scroll{
+    z-index: 2000;
+}
+
+.parent-pageid-11576 {
+    #top_menu {
+        background-color: $itcol;
+    }
+    #menu_lateral_btn .a, #top_menu #title svg path {
+        fill: white
+    }
+    #top_menu .radio path, #top_menu #acce_menu .icon_acce path {
+        fill: white;
+    }
+    #top_menu .radio:hover path, #top_menu #acce_menu .icon_acce:hover path {
+        fill: $itcol_active;
+    }
+    .navegacion_scroll, .navegacion_scroll .item {
+        background-color: $itclaro;
+        color: $itcol;
+    }
+    .navegacion_scroll {
+        border-bottom: 1px solid #cc6634;
+    }
+    .navegacion_scroll .item:after {
+        color: $itcol;
+    }
+
+    .leaflet-container {
+        background-color:#fff !important;
+        border: 1px solid #ccc;
+    } 
+}
+
+.calendario {
+    margin: 0 auto;
+    max-width: 1600px;
+
+    .inside {
+        width: 100%;
+        display: flex;
+        padding: 2.5%;
+        background-color: #fff;
+    }
+    &.chorrera {
+        .inside > svg, .left {width: 50%;}
+        .left {
+            svg {
+                circle {
+                    fill: #fff;
+                    stroke: $itcol;
+                    cursor: pointer;
+                    transition: all 0.25s ease;
+
+                    &:hover {
+                        fill: $itclaro
+                    }
+                }
+            }
+        }
+    }
+    &.awa {
+        .inside > svg {
+            width: 50%;
+        }
+
+        .left {
+            width: 50%;
+
+            svg {
+                path {
+                    fill: #fff;
+                    stroke: $itcol;
+                    stroke-width: 2;
+                    cursor: pointer;
+                    transition: all 0.25s ease;
+
+                    &:hover {
+                        fill: $itclaro
+                    }
+                }
+            }
+        }
+    }
+
+    .inside {
+        > svg {
+            g {
+                transition: all 0.4s ease;
+
+                &.opacity {
+                    opacity: 0.1;
+                }
+            }
+        }
+    }
+}

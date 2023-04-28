@@ -1,0 +1,166 @@
+.tres-botones {
+    width: 100%;
+    margin: auto;
+    max-width: 1600px;
+    margin-bottom: 9vh;
+
+    .botones {
+        display: flex;
+        justify-content: center;
+
+        .boton {
+            width: 33vw;
+            height: 33vw;
+            position: relative;
+            margin: 0.5%;
+            padding: 32px;
+            max-height: 500px;
+            min-height: 190px;
+          
+            .img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-position: center;
+                overflow: hidden;
+
+                svg {
+                    position: absolute;
+                    width: 100%;
+                    top: 50%;
+                    transform: translate(0, -50%);
+
+                    path {
+                        fill: #333;
+                    }
+                }
+            }
+
+            .name {
+                
+                h1 {
+                    font-size: 2 em;
+                }
+
+                h4 {
+                    font-family: 'CircularStd', sans-serif;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-size: 1em;
+                    padding-top: 5px;
+                    width: 85%;
+
+                    &::before {
+                        position: absolute;
+                        font-family: 'mnm';
+                        content: '\E80E';
+                        right: 50px;
+                    }
+                 }
+            }
+
+            @media #{$medium-and-down} {
+                max-width: none;
+                min-height: 20vw;
+                height: auto;
+                
+                
+            }
+        }
+    }
+
+    &.color {
+        .botones {
+
+            .boton {
+                &:nth-child(1) {
+                    background-color:$azul;
+                    .name {
+                        color: white;
+                    }
+                }
+          
+                &:nth-child(2) {
+                    background-color:#dfdfdf;
+                    .name {
+                        color: $black;
+                    }
+                }
+        
+                &:nth-child(3) {
+                    background-color:$black;
+                    .name {
+                        color: white;
+                    }
+                }
+                
+                .name {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    h4 {
+                        margin-left: 0 !important;
+                    }
+                }
+            }
+        }
+
+    }
+    
+    &.segunda{
+        .sec {
+            display: block;
+            width: 100%;
+            max-width: 1600px;
+            margin-left: auto;
+            margin-right: auto;
+
+            @media #{$extralarge-and-down} {
+                padding-left: 10px;
+            }
+        }
+
+        .boton {
+            background-color: #F6F6F6; 
+            max-width: none;
+            min-height: 400px;
+
+            .name {
+                bottom: 5%;
+                position: absolute;
+
+                .btn {
+                    background-color: #3B3B3B;
+
+                    &:hover {
+                        background: $azul;
+                    }
+                }
+
+                p {
+                    max-width: 70% !important;
+                    margin-left: 0 !important;
+                    font-weight: 300;
+                    color: $black;
+                }
+            }
+
+            
+        }
+    }
+
+    @media all and (max-width: 1000px) {
+        .botones {
+            flex-wrap: wrap;
+
+            .boton {
+                width: 100%;
+            }
+        }
+    }
+}

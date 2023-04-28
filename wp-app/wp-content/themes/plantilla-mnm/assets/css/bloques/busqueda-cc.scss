@@ -1,0 +1,49 @@
+#busqueda-cc {
+    display: flex;
+    max-width: 850px;
+    margin: 0 auto;
+    align-items: center;
+
+    .submit {
+        background: $azul;
+        padding: 10px;
+        border-radius: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: white;
+        margin-left: 20px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+    }
+}
+
+.inputField {
+    display: flex;
+    align-items: center;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    background: #f3f3f3;
+    width: 100%;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 50px;
+}
+
+.inputField .icon {
+    width: 20px;
+    height: 20px;
+}
+
+.inputField input {
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    margin-left: 10px;
+}
+
+.inputField path {
+    fill: #999;
+}

@@ -1,0 +1,120 @@
+.banner {
+    &.cita-imagen {
+        height: 50vh;
+        min-height: 400px;
+        background: $grisclaro;
+
+        &.oscuro {
+            background: #333;
+        }
+
+        @media #{$medium-and-down} { 
+            height: 70vh;
+        }
+
+        @media #{$small-and-down} { 
+            height: 110vh;
+        }
+        
+        .contenedor-banner {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            max-width: 1600px;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;
+
+            @media #{$medium-and-down} { 
+                flex-direction: column-reverse;
+                justify-content: space-around;
+            }
+
+            .left, .right {
+                height: 100%;
+                width: 50%;
+
+                @media #{$medium-and-down} { 
+                    width: 100%;
+                }
+            }
+
+            .left {
+                
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 10px;
+
+                @media #{$medium-and-down} { 
+                    height: 60%;
+                }
+
+                p {
+                    margin: 0 !important;
+                }
+
+            
+                h1 {
+                    max-width: 600px;
+                    color: $black;
+
+                    @media #{$small-and-down} { 
+                        width: 100%;
+                        font-size: 24px;
+                    }
+                }
+
+                h6 {
+                    font-family: "Inter", sans-serif;
+                    font-weight: normal;
+                    font-size: 16px;
+                    color: $gris;
+                    margin-top: 20px;
+                }
+
+                .link {
+                    font-family: 'CircularStd', sans-serif;
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: $black;
+                    bottom: 5%;
+                    position: absolute;
+
+                    &::before {
+                        position: absolute;
+                        font-family: 'mnm';
+                        content: '\E80E';
+                        margin-left: 250px;
+                    }
+                }
+
+                .cita, .link {
+                    display: block;
+                    width: 100%;
+                }
+
+            }
+
+            .right {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+
+                @media #{$medium-and-down} { 
+                    height: 40%;
+                }
+
+                .img {
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                }
+            }
+        }
+    }
+}

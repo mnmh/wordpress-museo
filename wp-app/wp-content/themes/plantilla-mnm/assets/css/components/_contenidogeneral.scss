@@ -1,0 +1,66 @@
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+#contenidoGeneral {
+  min-height: 100%;
+  overflow: hidden;
+  //padding: em(5);
+
+
+  body.page-pagina-principal-data & {
+    padding: 0;
+  }
+
+  .columnas {
+    h2, h3, h4, h5, h6, p {
+      //color: #333;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+  h2, h3, h4, h5, h6, p, > ul {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .acordeon_hijo > ul, > ul {
+    font-size: 16px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .acordeon_hijo > ul li, > ul li {
+      margin-bottom: 20px;
+      padding-left: 20px;
+      position: relative;
+  }
+
+  .acordeon_hijo > ul li::before, > ul li::before {
+      content: '';
+      width: 15px;
+      height: 15px;
+      border-radius: 30px;
+      background: #f7d07c;
+      position: absolute;
+      left:0;
+      top:5px;
+  }
+
+  .tenpix {
+    @media screen and (max-width: 800px) {
+      margin: 0 10px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    //padding: em(8);
+  }
+}
+
+#frontImg {
+  background: red;
+  height: calc(100vh - 70px);
+}

@@ -1,0 +1,100 @@
+@import "common/variables";
+@import "common/functions";
+@import "common/mapa";
+
+/** Import theme styles */
+@import "common/global";
+@import "components/buttons";
+@import "components/comments";
+@import "components/forms";
+@import "components/background_video";
+@import "components/contenidogeneral";
+// @import "components/sidemenu";
+@import "components/sidemenu-nuevo";
+@import "components/scroll-down";
+@import "components/frontslider";
+@import "components/downloads-list";
+@import "components/wp-classes";
+
+
+@import "layouts/publicaciones";
+@import "layouts/top-presentacion";
+@import "layouts/top-single";
+@import "layouts/casos";
+@import "layouts/contenido-texto";
+@import "layouts/bloque-publicaciones";
+@import "layouts/bloque-equipo";
+@import "layouts/sidebar-archive";
+@import "layouts/programacion-agenda";
+@import "layouts/programacion-radio";
+@import "layouts/tematicas";
+@import "layouts/mapa-educacion";
+@import "layouts/bloque-txt";
+@import "layouts/agenda-dia-front";
+@import "layouts/radio-banner";
+// @import "layouts/page-voces";
+@import "layouts/lugares";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/tinymce";
+
+
+@import "generales";
+
+
+@import "elementos/calendario";
+@import "elementos/formulario-correo";
+@import "elementos/listado-inscritos";
+@import "elementos/arte-cultura";
+@import "elementos/citas";
+@import "elementos/cifras";
+@import "elementos/recorridovirtual";
+@import "elementos/caminando-memoria";
+
+
+@import "bloques/carrousel-verticales";
+@import "bloques/carrousel-botones";
+@import "bloques/carrousel-cuadros";
+@import "bloques/banner-ejes";
+@import "bloques/banner-texto";
+@import "bloques/banner-botones";
+@import "bloques/banner-carrousel";
+@import "bloques/banner-carrousel-margenes";
+@import "bloques/lista-tarjetas";
+@import "bloques/linea-tiempo";
+@import "bloques/imagen-botones";
+@import "bloques/tres-botones";
+@import "bloques/bloque-galeria";
+@import "bloques/bloque-agenda";
+@import "bloques/bloque-banner-cita-imagen";
+@import "bloques/bloque-banner-corto-texto";
+@import "bloques/bloque-header-columna";
+@import "bloques/bloque-personajes";
+@import "bloques/bloque-equipo";
+@import "bloques/iconos-cc";
+@import "bloques/busqueda-cc";
+@import "bloques/filtro-tipo-cc";
+@import "bloques/filtro-tags-cc";
+@import "bloques/slider-columna";
+@import "bloques/video-youtube";
+@import "bloques/bloque-curaduria";
+@import "bloques/bloque-navscroll";
+@import "bloques/titulo-modulo";
+@import "bloques/destacados-css";
+@import "bloques/leaflet";
+@import "bloques/pronto-bloques";
+@import "bloques/bloque-reproductor-sencillo";
+
+@import "template-uno";
+
+@import "common/accesibilidad";
+
+@import "elementos/contenido-cc";
+@import "elementos/centro-contenido";
+
+@import "common/pueblos";
+
+@import "bloques/it2020";

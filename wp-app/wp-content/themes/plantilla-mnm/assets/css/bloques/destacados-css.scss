@@ -1,0 +1,56 @@
+.destacados-cc {
+    display: flex;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    ul {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        @media #{$large-and-down} {
+            display: block;
+
+        }
+
+        li {
+            width: 49.2%;
+
+            @media #{$large-and-down} {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+
+            a {
+                display: block;
+
+                .img {
+                    height: 440px;
+                    border-radius: 5px;
+                    background-size: cover;
+                }
+            }
+
+            .name {
+                padding: 10px 0 10px 0;
+            }
+            
+            .name h1 {
+                font-size: 1.25em;
+                padding-bottom: 4px;
+            }
+            
+            .name h4 {
+                font-family: 'Inter';
+                font-weight: normal;
+                font-size: 1em;
+                color: $gris;
+
+                @media #{$large-and-down} {
+                    margin-left: 0 !important;
+                }
+                
+            }
+        }
+    }
+}

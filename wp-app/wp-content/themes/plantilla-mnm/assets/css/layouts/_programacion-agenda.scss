@@ -1,0 +1,359 @@
+/* stylelint-disable */
+.agenda-wrapper {
+  position: relative;
+}
+
+.agenda {
+  margin-left: auto;
+  margin-right: auto;
+  //width: 100%;
+  //max-width: 1600px;
+  overflow: visible;
+  font-size: em(15);
+
+  @media screen and (min-width: 980px) {
+    font-size: em(13);
+  }
+
+  &.medallo {
+    padding: 0 0 10em 20px !important;
+    margin-bottom: 2em !important;
+
+    .btn {
+      font-size: 16px;
+
+      @media #{$small-and-down} {
+        font-size: 14px;
+      }
+    }
+
+    .texto {
+      font-size: 1.125em;
+      width: 95%;
+      max-width: 600px;
+      margin: 0;
+      line-height: 1.8em;
+      margin-top: 1.5em;
+
+      &.participante p {
+        font-size: 1em !important;
+        line-height: 1.5em;
+      }
+    }
+
+    .item-agenda {
+      max-width: 450px;
+      max-height: 600px;
+      height: 80vh;
+
+      @media #{$medium-and-down} {
+        max-width: 500px;
+        max-height: 660px;
+        
+      }
+
+      @media #{$small-and-down} {
+        height: 90vh;
+      }
+
+      .inside {
+        position: absolute;
+        top: 75px;
+      }
+    }
+
+    .timeNav .meses {
+    }
+  }
+  
+  .hori_scroll {
+    position: absolute;
+    width: 2.5em;
+    top: 0.5em;
+    left: 0;
+    z-index: 10;
+    text-align: center;
+    font-size: em(16,13);
+
+    @media #{$medium-and-down} {
+      visibility: hidden;
+    }
+
+    div {
+      width: 2.5em;
+      height: 2.5em;
+      padding: 0;
+      margin: 0 0 0.3125em 0;
+      cursor: pointer;
+      position: relative;
+      font-family: 'mnm';
+
+      &.disabled {
+        color: #ccc;
+        border-color: #ccc;
+      }
+    }
+
+    .num {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      font-weight: 500;
+      font-size: 1.375em;
+      margin-bottom: 0.72727em;
+    }
+  }
+
+  .timeNav {
+    font-family: 'CircularStd', sans-serif;
+
+    .meses {
+      font-weight: 500;
+      font-size: em(20);
+      // padding: 0 em(20,20);
+      margin-bottom: em(20);
+      overflow: hidden;
+
+      @media screen and (min-width: 980px) {
+        font-size: em(26);
+        // padding: 0 em(20,26);
+        margin-bottom: em(20,26);
+      }
+    }
+    .meses,
+    .dias {
+      .item {
+        text-transform: lowercase;
+        display: inline-block;
+      }
+    }
+
+    .meses {
+      .item {
+        color: #999;
+        cursor: pointer;
+        margin-right: em(10,14);
+
+        &.selected {
+          color: $black;
+        }
+      }
+    }
+
+    .dias {
+      font-weight: 500;
+      cursor: pointer;
+
+      @media screen and (min-width: 980px) {
+        margin-bottom: em(70);
+      }
+
+      .item {
+        font-size: em(47);
+        text-align: center;
+        margin-right: em(5);
+        color:#ccc;
+        display: none;
+        transition: opacity 300ms;
+        margin-right: em(8);
+
+        @media screen and (min-width: 650px) {
+          margin-right: em(10);
+        }
+
+        @media screen and (min-width: 980px) {
+          font-size: em(70);
+        }
+
+        span {
+          font-size: em(23,47);
+          display: block;
+        }
+
+        &.selected {
+          color: $black;
+        }
+
+        &:hover {
+          color: $gris;
+        }
+      }
+    }
+  }
+
+  .items {
+    margin-top: em(25);
+    width: 100%;
+    overflow: visible;
+    padding: 0.9375em 0.9375em 0 4em;
+
+    @media #{$medium-and-down} {
+      padding: 0.9375em 0.9375em 0 0;
+    }
+
+
+    @media screen and (min-width: 1024px) {
+      margin-top: em(50);
+      padding: 0.9375em 0.9375em 0 5em;
+    }
+
+  }
+
+  .item-agenda {
+    text-decoration: none;
+    color: $black;
+    width: 70vw;
+    height: 70vw;
+    max-width: 350px;
+    max-height: 350px;
+    display: block;
+    position: relative;
+    border: 1.7px solid $black;
+    margin-right: em(20);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding: 1.25em 1.25em;
+    border-radius: 5px;
+
+    &.escondido {
+      opacity: 0.25;
+    }
+
+    @media #{$small-and-down} {
+      padding: 1.25em 1.25em;
+      width: 100%;
+    }
+
+    @media screen and (min-width: 980px) {
+      margin-right: em(25);
+      padding: em(33) em(40);
+
+    }
+
+    &.is-selected {
+      opacity: 1;
+    }
+
+    &.escondido{
+      @include left-offset(-60px);
+      @include transition-mix(transform);
+    }
+
+    &:hover {
+      a:not(:hover){
+          opacity: 0.25;
+      }
+    }
+
+    .inside {
+      // position: absolute;
+      // bottom: 10px;
+      width: 90%;
+
+      @media screen and (max-width: 400px) {
+        font-size: 0.75em;
+      }
+    }
+
+    .nombre {
+      font-family: 'CircularStd', sans-serif;
+      font-size: 1.5625em;
+      font-weight: 600;
+      margin: 0 10px 0.4em 0;
+
+      @media screen and (min-width: 980px) {
+        font-size: em(30);
+      }
+    }
+
+    .hora {
+      color: $black;
+      font-family: 'CircularStd', sans-serif;
+      font-weight: 600;
+      display: block;
+      position: absolute;
+      left: 0.25em;
+      top: -0.3em;
+      font-size: 4em;
+      text-transform: uppercase;
+      line-height: 0.75;
+      transition: opacity 300ms ease 200ms, transform 300ms ease 200ms;
+      transform: translate3d(0, 0, 0);
+      background: white;
+      z-index: 1;
+      display: inline-block;
+      width: auto;
+      padding-left: 10px;
+      padding-right: 5px;
+
+      @media screen and (min-width: 980px) {
+        font-size: em(80);
+        left: em(25,60);
+      }
+
+      @media screen and (max-width: 400px) {
+        font-size: 2.25em;
+        letter-spacing: 2px;
+      }
+    }
+
+    .time {
+      font-size: 0.9375em;
+      font-family: 'Inter', sans-serif;
+      margin-bottom: 0.4375em;
+
+      &::before {
+        font-family: 'mnm';
+        display: inline-block;
+        content: '\E80D';
+        font-size: 14px;
+        margin-right: 5px;
+      }
+    }
+
+    .ubicacion {
+      font-size: 0.9375em;
+      font-family: 'Inter', sans-serif;
+      margin-bottom: 0.4375em;
+      text-transform: capitalize;
+
+      &::before {
+        font-family: 'mnm';
+        display: inline-block;
+        content: '\E80C';
+        font-size: 14px;
+        margin-right: 5px;
+        padding-left: 2px;
+      }
+    }
+
+    .tipo {
+          font-size: 14px;
+          text-transform: uppercase;
+          font-weight: 600;
+          display: block;
+          margin-bottom: 0;
+          color: $gris
+    }
+  }
+}
+
+.site-section {
+  margin-bottom: em(70);
+
+  @media screen and (min-width: 850px) {
+    margin-bottom: em(110);
+  }
+
+  @media screen and (min-width: 1024px) {
+    margin-bottom: em(160);
+
+    #archive_item_content & {
+      margin-bottom: em(110);
+    }
+  }
+}

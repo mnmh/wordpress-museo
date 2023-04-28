@@ -1,0 +1,58 @@
+.mapaContainer.display,.mapaContainer.buscador {
+    display: flex;
+    align-items: center;
+
+    .mapaCC {
+        max-width: 1000px;
+        width: 100%;
+
+        #Layer_2{
+            path {
+                fill: transparent !important;
+                transition: all 0.25s ease;
+                cursor: pointer;
+
+                &:hover {
+                    fill: rgba($color: #ffffff, $alpha: 0.7) !important
+                }
+            }
+        }
+
+        .mapa_bola {
+            cursor: pointer;
+            stroke: #333;
+
+            &:hover, &.active {
+                fill: white;
+            }
+        }
+    }
+
+    .sideMap {
+        width: 100%;
+        max-width: 500px;
+        background-color: white;
+
+        .content {
+            padding: 10px;
+
+            .lugar {
+                color: #89b7be;
+                font-size: 2em;
+            }
+
+            .texto {
+                color: #999;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    &.buscador {
+        justify-content: center;
+
+        .mapaCC {
+            max-width: 500px;
+        }
+    }
+}

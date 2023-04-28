@@ -1,0 +1,69 @@
+.parent-pageid-11339, .page-id-11339 {
+    .navegacion_especiales {
+        background: #F6c04b;
+    }
+
+    .reproductor_sencillo .inside .left .btn, .reproductor_sencillo .time .bar {
+        background: #F6c04b;
+    }
+
+    .reproductor_sencillo .time .bar .num span {
+        color: #F6c04b;
+    }
+
+    .slider-columna:not(.half) .right .inside .item {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: #f6c04b;
+    }
+    
+    .navegacion_especiales .item {
+        background: #F6c04b;
+    }
+    
+    .navegacion_especiales .item.active::after {
+        background-color: #6cb0b9;
+        border-color: #6cb0b9;
+    }
+    
+    .navegacion_scroll .item, .navegacion_scroll {
+        background: #F6c04b;
+    }
+    
+    .navegacion_scroll{
+        border-bottom: 1px solid #e2ac35;
+    }
+
+    .fila-botones .item .inside .name{
+        background: #f6c04bcc;
+    }
+
+    .slider-columna:not(.half).rojo .left,.slider-columna.half .right:before{
+        background: #F6c04b;
+    }
+
+    .slider-columna.half .left {
+        background: #F6c04b;
+    }
+
+    .titulo-modulo {
+        text-align: center;
+        font-size: 1.5em;
+        color: #6cb0b9;
+    }
+    
+    .titulo-modulo h2 {
+        color: #6cb0b9;
+        font-weight: normal;
+    }
+
+    #contenidoGeneral svg {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    #contenidoGeneral strong {
+        color: #f68b4b;
+    }
+}
