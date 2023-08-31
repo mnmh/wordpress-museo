@@ -152,6 +152,7 @@ De esta manera, puede usar el comando CLI anterior de la siguiente manera:
 lista de complementos wp
 ```
 
+
 ### phpMyAdmin
 
 También puede visitar `http://127.0.0.1:8080` para acceder a phpMyAdmin después de iniciar los contenedores.
